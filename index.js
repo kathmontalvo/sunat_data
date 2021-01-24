@@ -38,7 +38,8 @@ const getJson = (datajson) => {
         const newData = allData.map(el => {
             return el['RUC/DNI']
         })
-        newData.forEach(ruc => {
+        newData.forEach((ruc, i) => {
+            // console.log(ruc, i);
             getData(ruc).then(res => console.log(res))
             // getData2(ruc).then(res => console.log(res))
         });
